@@ -216,6 +216,22 @@
     }
     .download-btn:hover { background: var(--accent-hover); color: #fff; text-decoration: none; opacity: 1; }
 
+    .md-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: none;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 10px 18px;
+      border: 1px solid var(--accent);
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+    }
+    .md-btn:hover { background: var(--accent); color: #fff; text-decoration: none; }
+
     /* ── Metrics ── */
     .metrics {
       display: grid;
@@ -376,6 +392,7 @@
       color: var(--text-primary);
       margin-bottom: 8px;
     }
+    .project-name .desc-tail { color: var(--text-muted); font-weight: 400; }
 
     .project-desc {
       font-size: 14px;
@@ -613,9 +630,9 @@
         <span class="dot">·</span>
         <span>Distributed Systems</span>
         <span class="dot">·</span>
-        <span>AI/ML Platform</span>
+        <span>AI-Assisted Engineering</span>
       </div>
-      <p class="hero-quote">"A data platform builder interested in AI systems and their mathematical foundations."</p>
+      <p class="hero-quote">"A data-platform builder applying senior engineering discipline — measurement, cost, judgment — to AI-assisted software."</p>
       <div class="hero-meta">
         <div class="meta-item">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -639,11 +656,24 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
           GitHub
         </a>
+        <a class="meta-badge" href="https://sansword.github.io/sans_blog/" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Blog
+        </a>
       </div>
-      <a class="download-btn" href="2026_wen_kai_huang_resume.pdf" download>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download Resume PDF
-      </a>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+        <a class="download-btn" href="2026_wen_kai_huang_resume.pdf" download>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume PDF
+        </a>
+        <span style="display:inline-flex;align-items:center;gap:10px;">
+          <a class="md-btn" href="cv.md" target="_blank" rel="noopener">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Resume in Markdown
+          </a>
+          <span style="font-size:12px;color:var(--text-muted);max-width:210px;line-height:1.35;">LLM-friendly plain text — feed it to an AI to ask about my background</span>
+        </span>
+      </div>
     </div>
 
     <!-- Metrics -->
@@ -676,10 +706,10 @@
         serving ~900M monthly active users across US, APAC, and Europe. Specialized in
         <strong>high-throughput, fault-tolerant pipelines</strong> (&gt;20K msgs/sec), scalable data platforms
         and cloud-native migrations. Proven technical leader and mentor recognized for cross-functional
-        collaboration and driving large-scale impact across globally distributed teams. Currently exploring
-        <strong>agentic development and harness engineering</strong> through hands-on projects and public
-        writing — applying measurement discipline (cost, model comparison, workflow design) to AI-assisted
-        software engineering.
+        collaboration and driving large-scale impact across globally distributed teams. Now building and
+        measuring <strong>agentic development and harness engineering</strong> through hands-on projects and
+        public writing — applying measurement discipline (cost, model comparison, workflow design) to
+        AI-assisted software engineering.
       </p>
     </section>
 
@@ -733,33 +763,46 @@
 
     <!-- Projects -->
     <section>
-      <span class="section-tag">Side Projects &amp; Public Writing</span>
+      <span class="section-tag" style="font-size:15px;font-weight:700;letter-spacing:0.04em;color:var(--accent);text-transform:none;">AI Engineering in Public — Shipped Projects &amp; Measured Writing</span>
       <hr class="section-divider" />
 
+      <p class="summary-text" style="margin-bottom:28px">
+        The through-line below is <strong>measurement and judgment</strong> — applying senior
+        engineering discipline (cost analysis, model comparison, security review, design
+        tradeoffs) to AI-assisted work, and documenting the work openly so it stands as
+        evidence. Three properties back this up: a <a href="https://sansword.github.io/sans_blog/" target="_blank" rel="noopener">public blog</a>
+        on the skeptic-to-shipping journey, a <a href="https://github.com/SansWord/sans_learning" target="_blank" rel="noopener">learning-in-public notes repo</a>
+        with measured cost/model studies, and the shipped projects below.
+      </p>
+
       <div class="project-card">
-        <div class="project-tag">Essay · AI Practice</div>
-        <div class="project-name"><a href="https://sansword.github.io/sans_blog/" target="_blank" rel="noopener">My Tiny AI Bootcamp ↗</a></div>
-        <p class="project-desc">Public write-up of 3 weeks going from AI skeptic to shipping 3 projects with Claude; reflects on where AI fills knowledge gaps vs. where senior judgment still steers design decisions (e.g. introducing a <code style="font-size:13px;background:var(--tag-bg);padding:1px 5px;border-radius:3px">CubeDriver</code> interface to decouple BLE from pointer/touch input).</p>
+        <div class="project-tag">Essay · Context Engineering</div>
+        <div class="project-name"><a href="https://sansword.github.io/sans_blog/doc-tree/" target="_blank" rel="noopener">The Document Tree <span class="desc-tail">— keeping AI-built projects on track</span> ↗</a></div>
+        <div class="project-subtitle" style="font-size:13.5px;color:var(--text-secondary);font-style:italic;margin:1px 0 7px;">Keep an agent's context in sync with the code — without burning the context window.</div>
+        <p class="project-desc">How I keep an AI-built project on track: a lazy-loaded <strong>document tree</strong> — a small auto-loaded index pointing to topic docs, a two-tier split between maintained and historical docs, one-fact-one-place, and using a fresh-context agent to catch where the docs have silently drifted from the code. Grounded in the real <code style="font-size:13px;background:var(--tag-bg);padding:1px 5px;border-radius:3px">CLAUDE.md</code> / <code style="font-size:13px;background:var(--tag-bg);padding:1px 5px;border-radius:3px">docs/</code> trees of guasi and sans_cube. The post-bootcamp insight from going deeper on agentic workflows.</p>
+        <div class="project-period">2026 · Jun</div>
+      </div>
+
+      <div class="project-card" style="border-left:3px solid var(--accent);background:var(--tag-bg);">
+        <div class="project-tag">Writing Hub</div>
+        <div class="project-name"><a href="https://sansword.github.io/sans_blog/" target="_blank" rel="noopener">sans_blog <span class="desc-tail">— essays &amp; study guides</span> ↗</a></div>
+        <p class="project-desc">My writing home: building software, and building it with AI. Highlights — <a href="https://sansword.github.io/sans_blog/tiny-ai-bootcamp/" target="_blank" rel="noopener">My Tiny AI Bootcamp</a> (the skeptic-to-shipping story), a worked <a href="https://sansword.github.io/sans_blog/sd_mock/" target="_blank" rel="noopener">Leaderboard System Design</a> study guide, and agentic-coding pieces like The Document Tree (above).</p>
         <div class="project-period">2026 · Present</div>
       </div>
 
       <div class="project-card">
-        <div class="project-tag">Study Guide · System Design</div>
-        <div class="project-name"><a href="https://sansword.github.io/sans_blog/sd_mock/" target="_blank" rel="noopener">Leaderboard System Design — A Study Guide ↗</a></div>
-        <p class="project-desc">Self-authored study guide covering interview skills, a full worked leaderboard design (Redis sorted sets, fan-out, sharding, rank problem), and a companion note on using AI to prepare for system design interviews.</p>
-        <div class="project-period">2026</div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-tag">Notes · Claude Code Workflows</div>
-        <div class="project-name"><a href="https://github.com/SansWord/sans_learning/blob/main/README.md" target="_blank" rel="noopener">sans_learning ↗</a></div>
-        <p class="project-desc">Measured notes on Claude Code workflows: <strong>7.8× cost delta</strong> between Sonnet 4.6 and Opus 4.7 on an identical feature run; per-story-point cost analysis; definition of harness engineering.</p>
+        <div class="project-tag">Live Product · Full-Stack · Next.js · Postgres</div>
+        <div class="project-name" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <a href="https://guasi.tw/about" target="_blank" rel="noopener">guasi (我是) <span class="desc-tail">— cross-platform social identity verification</span> ↗</a>
+          <a class="live-demo-badge" href="https://guasi.tw/about" target="_blank" rel="noopener">Live</a>
+        </div>
+        <p class="project-desc">Shipped a live full-stack product end-to-end: <strong>Next.js 16 / React 19, Postgres (Neon) + Prisma, NextAuth</strong> — with per-PR preview deploys on isolated DB branches, post-deploy smoke tests, and agentic Claude Code workflows backed by a maintained cost ledger and devlog. The product is a platform-independent identity-verification service: people prove which social accounts are the same person (anti-impersonation) and keep that proof publicly verifiable even if an account is suspended — no platform API access; verification relies on publicly auditable posted content.</p>
         <div class="project-period">2026 · Present</div>
       </div>
 
       <div class="project-card">
         <div class="project-tag">Tool · Claude Code Skill · Harness Engineering</div>
-        <div class="project-name"><a href="https://github.com/SansWord/sans_ai_mock" target="_blank" rel="noopener">sans_ai_mock ↗</a></div>
+        <div class="project-name"><a href="https://github.com/SansWord/sans_ai_mock" target="_blank" rel="noopener">sans_ai_mock <span class="desc-tail">— an AI mock-interview kit</span> ↗</a></div>
         <p class="project-desc">AI-round mock interview kit. <strong>Multi-mode Claude Code agent</strong> — a root <code style="font-size:13px;background:var(--tag-bg);padding:1px 5px;border-radius:3px">CLAUDE.md</code> mode-routes between <em>interviewer</em> and <em>developer</em> modes on a single repo. Measured per-mock API cost (<strong>~$19–$26</strong>) across Pro / Max / raw-API tiers; includes a feedback rubric, a full real-run example, and a security-aware <code style="font-size:13px;background:var(--tag-bg);padding:1px 5px;border-radius:3px">CLAUDE.md</code> audit recipe for safe repo onboarding.</p>
         <div class="project-period">2026 · Apr</div>
       </div>
@@ -783,7 +826,7 @@
             <line x1="22" y1="10" x2="22" y2="22" stroke="white" stroke-width="0.8"/>
             <line x1="18" y1="12" x2="18" y2="24" stroke="white" stroke-width="0.8"/>
           </svg>
-          <a href="https://sansword.github.io/sans_cube/#solve--2" target="_blank" rel="noopener">sans_cube ↗</a>
+          <a href="https://sansword.github.io/sans_cube/#solve--2" target="_blank" rel="noopener">sans_cube <span class="desc-tail">— Bluetooth Rubik's-cube solve analyzer</span> ↗</a>
           <a class="live-demo-badge" href="https://sansword.github.io/sans_cube/#solve--2" target="_blank" rel="noopener">Live Demo</a>
         </div>
         <p class="project-desc">Real-time smart-cube solve analyzer with BLE ingestion, live 3D rendering, phase detection (CFOP/Roux), and opt-in Firestore cloud sync. Deliberately picked an unfamiliar stack to stress-test AI-assisted workflows on greenfield code.</p>
@@ -791,12 +834,14 @@
       </div>
 
       <div class="experiments-card">
-        <div class="experiments-label">Other experiments</div>
+        <div class="experiments-label">More work</div>
         <div class="experiments-items">
+          <a class="exp-pill" href="https://github.com/SansWord/sans_learning" target="_blank" rel="noopener">sans_learning — measured Claude Code cost notes (7.8× model delta) ↗</a>
           <a class="exp-pill" href="https://sansword.github.io/cut_sh/" target="_blank" rel="noopener">cut_sh — ffmpeg scripting ↗</a>
-          <a class="exp-pill" href="https://github.com/SansWord/sans_yt_summary/" target="_blank" rel="noopener">sans_yt_summary — Claude skill plugin with prompt-injection hardening ↗</a>
+          <a class="exp-pill" href="https://github.com/SansWord/sans_yt_summary/" target="_blank" rel="noopener">sans_yt_summary — Claude skill, prompt-injection hardening ↗</a>
         </div>
       </div>
+
     </section>
 
     <!-- Patent -->
@@ -838,10 +883,6 @@
         <tr>
           <td class="skill-label">AI Coding Practice</td>
           <td class="skill-values">Agentic Programming, Harness Engineering</td>
-        </tr>
-        <tr>
-          <td class="skill-label">Writing & Learning</td>
-          <td class="skill-values">Technical blog posts, study guides, public writing</td>
         </tr>
       </table>
     </section>
