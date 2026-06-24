@@ -68,34 +68,6 @@
       margin-top: 5pt;
     }
 
-    .header-qr {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 3pt;
-      flex-shrink: 0;
-      margin-left: 14pt;
-    }
-
-    .header-qr img {
-      width: 78pt;
-      height: 78pt;
-      display: block;
-    }
-
-    .qr-label {
-      font-size: 6.5pt;
-      color: #777;
-      text-align: center;
-      line-height: 1.3;
-    }
-
-    .qr-url {
-      font-size: 6.5pt;
-      color: #1a5fa8;
-      text-align: center;
-    }
-
     /* ── TWO COLUMNS ── */
     .body {
       display: grid;
@@ -180,9 +152,9 @@
     .skill-val { color: #444; }
 
     /* ── PROJECTS ── */
-    .project-item { margin-bottom: 4pt; }
+    .project-item { margin-bottom: 2.5pt; }
     .project-name { font-size: 8.5pt; font-weight: 600; color: #1a1a1a; }
-    .project-desc { font-size: 7.5pt; color: #555; line-height: 1.3; }
+    .project-desc { font-size: 7.5pt; color: #555; line-height: 1.25; }
 
     /* ── PATENT ── */
     .patent-name { font-size: 8pt; font-weight: 600; color: #1a1a1a; line-height: 1.3; margin-bottom: 1.5pt; }
@@ -207,19 +179,15 @@
 <div class="header">
   <div class="header-left">
     <div class="name">Wen-Kai "SansWord" Huang</div>
-    <div class="titles">Senior Software Engineer &nbsp;·&nbsp; Data Infrastructure &nbsp;·&nbsp; Distributed Systems &nbsp;·&nbsp; AI/ML Platform</div>
+    <div class="titles">Senior Software Engineer &nbsp;·&nbsp; Data Infrastructure &nbsp;·&nbsp; Distributed Systems &nbsp;·&nbsp; AI-Assisted Engineering</div>
     <div class="contact">
-      <span>sansword@gmail.com</span>
+      <span><a href="mailto:sansword@gmail.com">sansword@gmail.com</a></span>
       <span>(669) 220-0281</span>
-      <span>linkedin.com/in/sansword</span>
+      <span><a href="https://www.linkedin.com/in/sansword/">linkedin.com/in/sansword</a></span>
+      <span><a href="https://sansword.github.io/resume/">sansword.github.io/resume</a></span>
       <span>San Jose, CA</span>
     </div>
-    <div class="tagline">"A data platform builder interested in AI systems and their mathematical foundations."</div>
-  </div>
-  <div class="header-qr">
-    <img src="data:image/png;base64,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" alt="QR code — sansword.github.io/resume" />
-    <div class="qr-url">sansword.github.io/resume</div>
-    <div class="qr-label">Scan for full resume &amp; projects</div>
+    <div class="tagline">"A data-platform builder applying senior engineering discipline<br/>— measurement, cost, judgment — to AI&#8209;assisted software."</div>
   </div>
 </div>
 
@@ -233,7 +201,7 @@
     <div class="section">
       <div class="section-title">Professional Summary</div>
       <p class="summary">
-        Senior Software Engineer with <strong>9+ years</strong> designing and operating large-scale distributed systems and global data infrastructure on <strong>AWS and GCP</strong>, serving <strong>~900M monthly active users</strong> across US, APAC, and Europe. Specialized in high-throughput, fault-tolerant pipelines (&gt;20K msgs/sec), scalable data platforms, and cloud-native migrations. Proven technical leader recognized for cross-functional collaboration and large-scale impact. Currently exploring <strong>agentic development</strong> and harness engineering through hands-on projects and public writing.
+        Senior Software Engineer with <strong>9+ years</strong> designing and operating large-scale distributed systems and global data infrastructure on <strong>AWS and GCP</strong>, serving <strong>~900M monthly active users</strong> across US, APAC, and Europe. Specialized in high-throughput, fault-tolerant pipelines (&gt;20K msgs/sec), scalable data platforms, and cloud-native migrations. Proven technical leader recognized for cross-functional collaboration and large-scale impact. Now <strong>building and measuring</strong> agentic development and harness engineering through hands-on projects and public writing.
       </p>
     </div>
 
@@ -315,32 +283,45 @@
         <tr><td class="skill-label">Infrastructure</td><td class="skill-val">Terraform, Kubernetes, Docker, Redis</td></tr>
         <tr><td class="skill-label">Stream Processing</td><td class="skill-val">Apache Storm, Apache Pulsar, Kafka</td></tr>
         <tr><td class="skill-label">AI Practice</td><td class="skill-val">Agentic Programming, Harness Engineering</td></tr>
-        <tr><td class="skill-label">Writing</td><td class="skill-val">Technical blog posts, study guides</td></tr>
       </table>
+    </div>
+
+    <!-- BLOG / WRITING -->
+    <div class="section">
+      <div class="section-title">Writing &amp; Notes</div>
+      <div class="project-item">
+        <div class="project-name"><a href="https://sansword.github.io/sans_blog/">sans_blog — Essays &amp; Learning Notes ↗</a></div>
+        <div class="project-desc">Field notes on building software with AI — the skeptic-to-shipping story, system-design study guides, and context-engineering deep-dives.</div>
+      </div>
     </div>
 
     <!-- PROJECTS -->
     <div class="section">
-      <div class="section-title">Side Projects &amp; Writing</div>
+      <div class="section-title">AI Engineering in Public</div>
 
       <div class="project-item">
-        <div class="project-name">My Tiny AI Bootcamp</div>
-        <div class="project-desc">3 weeks AI skeptic → shipping 3 projects with Claude. Reflects on where senior judgment steers AI-assisted design decisions.</div>
+        <div class="project-name"><a href="https://sansword.github.io/sans_blog/doc-tree/">The Document Tree</a></div>
+        <div class="project-desc">Context engineering — a lazy-loaded doc tree that keeps an AI agent's context in sync with the code.</div>
       </div>
 
       <div class="project-item">
-        <div class="project-name">Leaderboard System Design — Study Guide</div>
-        <div class="project-desc">Full system design (Redis sorted sets, fan-out, sharding) with companion note on AI for interview prep.</div>
+        <div class="project-name"><a href="https://guasi.tw/about">guasi (我是)</a></div>
+        <div class="project-desc">Live full-stack identity-verification product — Next.js, Postgres/Prisma, NextAuth, preview-deploy CI/CD; built via agentic Claude Code workflows.</div>
       </div>
 
       <div class="project-item">
-        <div class="project-name">sans_learning</div>
-        <div class="project-desc">Measured notes: 7.8× cost delta between Sonnet 4.6 and Opus 4.7; per-story-point cost analysis; harness engineering.</div>
+        <div class="project-name"><a href="https://github.com/SansWord/sans_ai_mock">sans_ai_mock</a></div>
+        <div class="project-desc">Multi-mode Claude Code agent for AI mock interviews; measured per-mock API cost.</div>
       </div>
 
       <div class="project-item">
-        <div class="project-name">sans_cube</div>
-        <div class="project-desc">Real-time Rubik's cube analyzer — BLE ingestion, live 3D rendering, CFOP/Roux phase detection, Firestore sync.</div>
+        <div class="project-name"><a href="https://sansword.github.io/sans_cube/">sans_cube</a></div>
+        <div class="project-desc">Real-time Bluetooth Rubik's-cube solve analyzer — BLE, live 3D rendering, CFOP/Roux phase detection.</div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-name">More work</div>
+        <div class="project-desc"><a href="https://github.com/SansWord/sans_learning">sans_learning</a> (7.8× model-cost delta), <a href="https://sansword.github.io/cut_sh/">cut_sh</a> (ffmpeg scripting), <a href="https://github.com/SansWord/sans_yt_summary/">sans_yt_summary</a> (prompt-injection hardening).</div>
       </div>
 
     </div>

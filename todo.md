@@ -21,6 +21,9 @@ Dropped the ★ glyph, kept the accent-green + bold styling. Heading is now `AI 
 
 ## Other open items
 
+### [x] Sync the PDF (and print.html) — DONE (2026-06-24)
+Updated `print.html` to match the current page: hero title → "AI-Assisted Engineering", new tagline, "building and measuring" summary, cut the Writing skills row, and rebuilt Projects (The Document Tree, sans_blog, guasi, sans_ai_mock, sans_cube, + "More work"). Regenerated `2026_wen_kai_huang_resume.pdf` via headless Chrome; trimmed spacing to keep it **1 page** (verified with `mdls`). Generation mechanism + style preferences are now documented in `CLAUDE.md` (Publication targets §1). Experience bullets left as-is (soft-verb fix still deferred below).
+
 ### [ ] Push the resume repo
 All this session's resume edits are **local / unpushed**: hero quote rewrite, header title → "AI-Assisted Engineering", "currently exploring" → "building and measuring", guasi card (engineering-first + anti-impersonation reframe + smoke-test wording fix), cut "Writing & Learning" skills row, new "The Document Tree" project card, bootcamp link → `/tiny-ai-bootcamp/`, and the `CLAUDE.md` "Publication targets" section. Review, then `git push` (deploys to https://sansword.github.io/resume/).
 **Note:** the blog repo (`sansword.github.io`) was already pushed 2026-06-24, so blog links are live; the resume's doc-tree card goes live only on the resume push.

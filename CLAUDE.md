@@ -24,8 +24,27 @@ The principle: **the resume narrative is downstream of the work.** New writing, 
 Three venues carry my public work. Work flows: project repos → these venues → the resume narrative. **Publishing convention:** prepare + commit locally per repo, then STOP — no `git push` / deploy without explicit go-ahead (publishing is outward-facing and hard to reverse). For drafts that name a third party, get consent first.
 
 ### 1. This repo — resume / portfolio
-- `index.html` (live: https://sansword.github.io/resume/) + `cv.md` (markdown mirror). **Edit both together to keep in sync.** `print.html` + the PDF are for download.
+- **Three artifacts that must ALL stay in sync — any content change lands in all three:**
+  1. `index.html` — the live page (https://sansword.github.io/resume/), single-column, green accent, project *cards* with dimmed inline descriptors.
+  2. `cv.md` — markdown mirror; also linked from the page as the "Resume in Markdown" (LLM-friendly) download. Mirrors `index.html` order + descriptors.
+  3. `print.html` → `2026_wen_kai_huang_resume.pdf` — the downloadable PDF (linked from the page's Download button).
 - Deployed via GitHub Pages from this repo.
+
+**Resume PDF — generation mechanism (keep it in sync as the portfolio's downloadable):**
+- `print.html` is the print-optimized **source**; never hand-edit the `.pdf`. After any content change, regenerate:
+  ```sh
+  cd <repo> && "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+    --headless --disable-gpu --no-pdf-header-footer \
+    --print-to-pdf="2026_wen_kai_huang_resume.pdf" \
+    "file://$(pwd)/print.html"
+  ```
+- **Must be exactly ONE page.** Verify: `mdls -name kMDItemNumberOfPages 2026_wen_kai_huang_resume.pdf` → expect `1`. If `2`: tighten copy and reduce `.project-item` / `.section` spacing (and `.project-desc` line-height) before touching `@page` margins.
+
+**Resume PDF — style preferences (its own condensed design, intentionally NOT identical to the web page):**
+- US-Letter, **two-column grid** — left: Summary, Experience, Patent, Education; right: Skills, Projects.
+- Body Helvetica ~8.8pt; headings/name Georgia serif; **blue accent `#1a5fa8`** (the web page uses green — deliberate divergence). Header contact line (email, LinkedIn, portfolio URL) is **clickable** — no QR code (the PDF is reviewed on-screen, where links beat a QR). A dedicated "Writing & Notes" callout (sans_blog) sits above the projects so the blog isn't buried.
+- Dense and recruiter-skimmable. The PDF is **content-synced, not 1:1**: experience bullets are condensed, projects are tightened one-liners, no card styling/colors. Keep the *claims/numbers/order* aligned with `index.html`/`cv.md`; the shorter phrasing is by design.
+- This print/PDF style is the design-parity reference for cover letters — see `cover_letter_pdf_workflow.md`.
 
 ### 2. sans_blog — long-form essays & guides
 - **Path:** `~/Source/github/sansword.github.io/sans_blog/`
