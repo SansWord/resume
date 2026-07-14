@@ -7,11 +7,11 @@
 **GitHub:** github.com/SansWord
 **Portfolio:** sansword.github.io/resume
 
-*"A data-platform builder applying senior engineering discipline — measurement, cost, judgment — to AI-assisted software."*
+*"A data-platform builder applying senior engineering discipline — measurement, cost, judgment — to AI-assisted engineering and LLM-powered systems."*
 
 ## Professional Summary
 
-Senior Software Engineer with 9+ years designing and operating large-scale distributed systems and global data infrastructure on AWS and GCP, serving ~900M monthly active users across US, APAC, and Europe. Specialized in high-throughput, fault-tolerant pipelines (>20K msgs/sec), scalable data platforms, and cloud-native migrations. Proven technical leader and mentor recognized for cross-functional collaboration and driving large-scale impact across globally distributed teams. Now building and measuring agentic development and harness engineering through hands-on projects and public writing — applying measurement discipline (cost, model comparison, workflow design) to AI-assisted engineering and LLM-powered systems — and convening AI展 (aitian), a weekly AI-application meetup (https://aitian.dev/).
+Senior Software Engineer with 9+ years designing and operating large-scale distributed systems and global data infrastructure on AWS and GCP, serving ~900M monthly active users across US, APAC, and Europe. Specialized in high-throughput, fault-tolerant pipelines (>20K msgs/sec), scalable data platforms, and cloud-native migrations. Proven technical leader and mentor recognized for cross-functional collaboration and driving large-scale impact across globally distributed teams. Since June 2025, on a self-directed build year: designing, shipping, and publicly measuring LLM-powered systems and agentic development workflows (harness engineering) — applying the same measurement discipline (cost, model comparison, eval design) to AI work — and convening AI展 (aitian), a weekly AI-application meetup (https://aitian.dev/).
 
 ## Work Experience
 
@@ -38,15 +38,20 @@ Jun 2016 – Feb 2019
 
 *The through-line here is **measurement and judgment** — applying senior engineering discipline (cost analysis, model comparison, security review, design tradeoffs) to AI-assisted work, and documenting the work openly so it stands as evidence. Backed by a public blog on the skeptic-to-shipping journey (https://sansword.github.io/sans_blog/), a learning-in-public notes repo with measured cost/model studies (https://github.com/SansWord/sans_learning), and the shipped projects below.*
 
-### AI Coding Practice — applied exploration of agentic development
-2026 – Present
+### LLM-Powered Systems
+
+- **sans_schema — query your data without knowing its schema** — Semantic query gateway with an LLM in the request path, wrapped in a deterministic contract: clients send `{want, where}` — their own field names plus a plain-English filter — and the gateway semantically resolves fields onto the real backend schema, compiles the filter to a validated predicate AST (the injection boundary; raw NL→SQL is never executed), and answers in the client's own keys with an `interpreted` echo. Two-part resolution cache, prompt-cache layout, confidence gate with refusal, adversarial SQLi/prompt-injection review; de-risked by a multi-vendor spike (~100% on a 52-case benchmark, 3 vendors / 9 models). Python/FastAPI on Fly.io; Next.js playground on Vercel. Live demo: https://sans-schema-playground.vercel.app/ · https://github.com/SansWord/sans_schema
+
+### Shipped Products — Built with Agentic Workflows
+
+- **guasi (我是) — cross-platform social identity verification** — Shipped a live full-stack product end-to-end: Next.js 16 / React 19, Postgres (Neon) + Prisma, NextAuth, with per-PR preview deploys on isolated DB branches, post-deploy smoke tests, and agentic Claude Code workflows backed by a maintained cost ledger and devlog. The product is a platform-independent identity-verification service: people prove which social accounts are the same person (anti-impersonation) and keep that proof publicly verifiable even if an account is suspended — no platform API access; verification relies on publicly auditable posted content. https://guasi.tw/about
+- **sans_cube — Bluetooth Rubik's-cube solve analyzer** — A real-time smart-cube solve analyzer with BLE ingestion, live 3D rendering, phase detection (CFOP/Roux), and opt-in Firestore cloud sync. Deliberately picked an unfamiliar stack to stress-test AI-assisted workflows on greenfield code. https://sansword.github.io/sans_cube/
+
+### Agentic Practice & Writing
 
 - **The Document Tree — keeping AI-built projects on track** — Context-engineering essay: a lazy-loaded document tree (small auto-loaded index → topic docs), a two-tier maintained/historical doc split, one-fact-one-place, and using a fresh-context agent to catch where docs silently drift from the code. Grounded in the real CLAUDE.md / docs/ trees of guasi and sans_cube, and productized as a reusable GitHub template — sans_doc_tree (https://github.com/SansWord/sans_doc_tree). https://sansword.github.io/sans_blog/doc-tree/
 - **sans_blog (Writing Hub)** — My writing home: essays and study guides on building software, and on building it with AI. Highlights: "My Tiny AI Bootcamp" (the skeptic-to-shipping story, https://sansword.github.io/sans_blog/tiny-ai-bootcamp/), a worked Leaderboard System Design study guide (https://sansword.github.io/sans_blog/sd_mock/), and agentic-coding pieces like The Document Tree. https://sansword.github.io/sans_blog/
-- **sans_schema — query your data without knowing its schema** — A semantic query gateway with an LLM in the request path, wrapped in a deterministic contract: clients send `{want, where}` — their own field names plus a plain-English filter — against a backend whose schema they never see. The gateway semantically resolves fields, compiles the filter to a validated predicate AST (the injection boundary — raw NL→SQL is never executed), runs it on Postgres, and answers in the client's own keys with an `interpreted` echo. Production-minded AI plumbing: two-part resolution cache, prompt-cache layout, confidence gate with refusal, adversarial SQLi/prompt-injection review — de-risked first by a multi-vendor resolution spike (~100% on a 52-case benchmark across 3 vendors / 9 models). Python/FastAPI gateway on Fly.io; Next.js playground with request-transparency panels on Vercel. Live demo: https://sans-schema-playground.vercel.app/ · Slides: https://sans-schema-playground.vercel.app/slides.html · https://github.com/SansWord/sans_schema
-- **guasi (我是) — cross-platform social identity verification** — Shipped a live full-stack product end-to-end: Next.js 16 / React 19, Postgres (Neon) + Prisma, NextAuth, with per-PR preview deploys on isolated DB branches, post-deploy smoke tests, and agentic Claude Code workflows backed by a maintained cost ledger and devlog. The product is a platform-independent identity-verification service: people prove which social accounts are the same person (anti-impersonation) and keep that proof publicly verifiable even if an account is suspended — no platform API access; verification relies on publicly auditable posted content. https://guasi.tw/about
 - **sans_ai_mock — an AI mock-interview kit** — Multi-mode Claude Code agent — a root CLAUDE.md mode-routes between interviewer and developer modes on a single repo. Measured per-mock API cost (~$19–$26) across Pro / Max / raw-API tiers; includes feedback rubric, real-run example, and a security-aware CLAUDE.md audit recipe for safe repo onboarding. https://github.com/SansWord/sans_ai_mock
-- **sans_cube — Bluetooth Rubik's-cube solve analyzer** — A real-time smart-cube solve analyzer with BLE ingestion, live 3D rendering, phase detection (CFOP/Roux), and opt-in Firestore cloud sync. Deliberately picked an unfamiliar stack to stress-test AI-assisted workflows on greenfield code. https://sansword.github.io/sans_cube/
 - **More work** — sans_learning (measured Claude Code cost notes — 7.8× model delta, https://github.com/SansWord/sans_learning) · cut_sh (ffmpeg scripting, https://sansword.github.io/cut_sh/) · sans_yt_summary (Claude skill, prompt-injection hardening, https://github.com/SansWord/sans_yt_summary/)
 
 ## Community
@@ -64,9 +69,9 @@ Jun 2016 – Feb 2019
 
 ## Skills
 
-- **Languages:** Python, Java, SQL, Shell, Groovy
+- **Languages:** Python, Java, SQL, Shell
 - **Cloud — GCP:** Dataproc, Cloud Composer, Dataflow, Airflow, BigQuery
 - **Cloud — AWS:** S3, ECS, ELB, ElastiCache
 - **Infrastructure:** Terraform, Kubernetes, Docker, Redis
-- **Stream Processing:** Apache Storm, Apache Pulsar, Kafka
-- **AI Coding Practice:** Agentic Programming, Harness Engineering
+- **Stream Processing:** Apache Pulsar, Kafka
+- **AI / LLM Engineering:** multi-vendor LLM integration (LiteLLM), prompt caching & cost engineering, eval design, guardrails (validated-AST query compilation, prompt-injection hardening), agentic workflows (Claude Code), harness engineering

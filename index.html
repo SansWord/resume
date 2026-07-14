@@ -706,11 +706,11 @@
         serving ~900M monthly active users across US, APAC, and Europe. Specialized in
         <strong>high-throughput, fault-tolerant pipelines</strong> (&gt;20K msgs/sec), scalable data platforms
         and cloud-native migrations. Proven technical leader and mentor recognized for cross-functional
-        collaboration and driving large-scale impact across globally distributed teams. Now building and
-        measuring <strong>agentic development and harness engineering</strong> through hands-on projects and
-        public writing — applying measurement discipline (cost, model comparison, workflow design) to
-        AI-assisted engineering and <strong>LLM-powered systems</strong> — and convening
-        <a href="https://aitian.dev/" target="_blank" rel="noopener">AI展 (aitian)</a>, a weekly AI-application meetup.
+        collaboration and driving large-scale impact across globally distributed teams. Since June 2025,
+        on a self-directed build year: designing, shipping, and publicly measuring <strong>LLM-powered
+        systems</strong> and <strong>agentic development workflows</strong> (harness engineering) —
+        applying the same measurement discipline (cost, model comparison, eval design) to AI work — and
+        convening <a href="https://aitian.dev/" target="_blank" rel="noopener">AI展 (aitian)</a>, a weekly AI-application meetup.
       </p>
     </section>
 
@@ -776,20 +776,7 @@
         with measured cost/model studies, and the shipped projects below.
       </p>
 
-      <div class="project-card">
-        <div class="project-tag">Essay · Context Engineering</div>
-        <div class="project-name"><a href="https://sansword.github.io/sans_blog/doc-tree/" target="_blank" rel="noopener">The Document Tree <span class="desc-tail">— keeping AI-built projects on track</span> ↗</a></div>
-        <div class="project-subtitle" style="font-size:13.5px;color:var(--text-secondary);font-style:italic;margin:1px 0 7px;">Keep an agent's context in sync with the code — without burning the context window.</div>
-        <p class="project-desc">How I keep an AI-built project on track: a lazy-loaded <strong>document tree</strong> — a small auto-loaded index pointing to topic docs, a two-tier split between maintained and historical docs, one-fact-one-place, and using a fresh-context agent to catch where the docs have silently drifted from the code. Grounded in the real <code style="font-size:13px;background:var(--tag-bg);padding:1px 5px;border-radius:3px">CLAUDE.md</code> / <code style="font-size:13px;background:var(--tag-bg);padding:1px 5px;border-radius:3px">docs/</code> trees of guasi and sans_cube, and productized as <a href="https://github.com/SansWord/sans_doc_tree" target="_blank" rel="noopener">sans_doc_tree</a> — a reusable GitHub template of the structure.</p>
-        <div class="project-period">2026 · Jun</div>
-      </div>
-
-      <div class="project-card" style="border-left:3px solid var(--accent);background:var(--tag-bg);">
-        <div class="project-tag">Writing Hub</div>
-        <div class="project-name"><a href="https://sansword.github.io/sans_blog/" target="_blank" rel="noopener">sans_blog <span class="desc-tail">— essays &amp; study guides</span> ↗</a></div>
-        <p class="project-desc">My writing home: building software, and building it with AI. Highlights — <a href="https://sansword.github.io/sans_blog/tiny-ai-bootcamp/" target="_blank" rel="noopener">My Tiny AI Bootcamp</a> (the skeptic-to-shipping story), a worked <a href="https://sansword.github.io/sans_blog/sd_mock/" target="_blank" rel="noopener">Leaderboard System Design</a> study guide, and agentic-coding pieces like The Document Tree (above).</p>
-        <div class="project-period">2026 · Present</div>
-      </div>
+      <div class="project-group-label" style="font-size:12.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin:22px 0 12px;">LLM-Powered Systems</div>
 
       <div class="project-card">
         <div class="project-tag">Live Demo · Semantic Gateway · LLM in the Request Path · FastAPI · Postgres</div>
@@ -802,6 +789,8 @@
         <div class="project-period">2026 · Jul</div>
       </div>
 
+      <div class="project-group-label" style="font-size:12.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin:22px 0 12px;">Shipped Products — Built with Agentic Workflows</div>
+
       <div class="project-card">
         <div class="project-tag">Live Product · Full-Stack · Next.js · Postgres</div>
         <div class="project-name" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
@@ -810,13 +799,6 @@
         </div>
         <p class="project-desc">Shipped a live full-stack product end-to-end: <strong>Next.js 16 / React 19, Postgres (Neon) + Prisma, NextAuth</strong> — with per-PR preview deploys on isolated DB branches, post-deploy smoke tests, and agentic Claude Code workflows backed by a maintained cost ledger and devlog. The product is a platform-independent identity-verification service: people prove which social accounts are the same person (anti-impersonation) and keep that proof publicly verifiable even if an account is suspended — no platform API access; verification relies on publicly auditable posted content.</p>
         <div class="project-period">2026 · Present</div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-tag">Tool · Claude Code Skill · Harness Engineering</div>
-        <div class="project-name"><a href="https://github.com/SansWord/sans_ai_mock" target="_blank" rel="noopener">sans_ai_mock <span class="desc-tail">— an AI mock-interview kit</span> ↗</a></div>
-        <p class="project-desc">AI-round mock interview kit. <strong>Multi-mode Claude Code agent</strong> — a root <code style="font-size:13px;background:var(--tag-bg);padding:1px 5px;border-radius:3px">CLAUDE.md</code> mode-routes between <em>interviewer</em> and <em>developer</em> modes on a single repo. Measured per-mock API cost (<strong>~$19–$26</strong>) across Pro / Max / raw-API tiers; includes a feedback rubric, a full real-run example, and a security-aware <code style="font-size:13px;background:var(--tag-bg);padding:1px 5px;border-radius:3px">CLAUDE.md</code> audit recipe for safe repo onboarding.</p>
-        <div class="project-period">2026 · Apr</div>
       </div>
 
       <div class="project-card">
@@ -843,6 +825,30 @@
         </div>
         <p class="project-desc">Real-time smart-cube solve analyzer with BLE ingestion, live 3D rendering, phase detection (CFOP/Roux), and opt-in Firestore cloud sync. Deliberately picked an unfamiliar stack to stress-test AI-assisted workflows on greenfield code.</p>
         <div class="project-period">2026 · Present</div>
+      </div>
+
+      <div class="project-group-label" style="font-size:12.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin:22px 0 12px;">Agentic Practice &amp; Writing</div>
+
+      <div class="project-card">
+        <div class="project-tag">Essay · Context Engineering</div>
+        <div class="project-name"><a href="https://sansword.github.io/sans_blog/doc-tree/" target="_blank" rel="noopener">The Document Tree <span class="desc-tail">— keeping AI-built projects on track</span> ↗</a></div>
+        <div class="project-subtitle" style="font-size:13.5px;color:var(--text-secondary);font-style:italic;margin:1px 0 7px;">Keep an agent's context in sync with the code — without burning the context window.</div>
+        <p class="project-desc">How I keep an AI-built project on track: a lazy-loaded <strong>document tree</strong> — a small auto-loaded index pointing to topic docs, a two-tier split between maintained and historical docs, one-fact-one-place, and using a fresh-context agent to catch where the docs have silently drifted from the code. Grounded in the real <code style="font-size:13px;background:var(--tag-bg);padding:1px 5px;border-radius:3px">CLAUDE.md</code> / <code style="font-size:13px;background:var(--tag-bg);padding:1px 5px;border-radius:3px">docs/</code> trees of guasi and sans_cube, and productized as <a href="https://github.com/SansWord/sans_doc_tree" target="_blank" rel="noopener">sans_doc_tree</a> — a reusable GitHub template of the structure.</p>
+        <div class="project-period">2026 · Jun</div>
+      </div>
+
+      <div class="project-card" style="border-left:3px solid var(--accent);background:var(--tag-bg);">
+        <div class="project-tag">Writing Hub</div>
+        <div class="project-name"><a href="https://sansword.github.io/sans_blog/" target="_blank" rel="noopener">sans_blog <span class="desc-tail">— essays &amp; study guides</span> ↗</a></div>
+        <p class="project-desc">My writing home: building software, and building it with AI. Highlights — <a href="https://sansword.github.io/sans_blog/tiny-ai-bootcamp/" target="_blank" rel="noopener">My Tiny AI Bootcamp</a> (the skeptic-to-shipping story), a worked <a href="https://sansword.github.io/sans_blog/sd_mock/" target="_blank" rel="noopener">Leaderboard System Design</a> study guide, and agentic-coding pieces like The Document Tree (above).</p>
+        <div class="project-period">2026 · Present</div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-tag">Tool · Claude Code Skill · Harness Engineering</div>
+        <div class="project-name"><a href="https://github.com/SansWord/sans_ai_mock" target="_blank" rel="noopener">sans_ai_mock <span class="desc-tail">— an AI mock-interview kit</span> ↗</a></div>
+        <p class="project-desc">AI-round mock interview kit. <strong>Multi-mode Claude Code agent</strong> — a root <code style="font-size:13px;background:var(--tag-bg);padding:1px 5px;border-radius:3px">CLAUDE.md</code> mode-routes between <em>interviewer</em> and <em>developer</em> modes on a single repo. Measured per-mock API cost (<strong>~$19–$26</strong>) across Pro / Max / raw-API tiers; includes a feedback rubric, a full real-run example, and a security-aware <code style="font-size:13px;background:var(--tag-bg);padding:1px 5px;border-radius:3px">CLAUDE.md</code> audit recipe for safe repo onboarding.</p>
+        <div class="project-period">2026 · Apr</div>
       </div>
 
       <div class="experiments-card">
@@ -889,7 +895,7 @@
       <table class="skills-table">
         <tr>
           <td class="skill-label">Languages</td>
-          <td class="skill-values">Python, Java, SQL, Shell, Groovy</td>
+          <td class="skill-values">Python, Java, SQL, Shell</td>
         </tr>
         <tr>
           <td class="skill-label">Cloud — GCP</td>
@@ -905,11 +911,11 @@
         </tr>
         <tr>
           <td class="skill-label">Stream Processing</td>
-          <td class="skill-values">Apache Storm, Apache Pulsar, Kafka</td>
+          <td class="skill-values">Apache Pulsar, Kafka</td>
         </tr>
         <tr>
-          <td class="skill-label">AI Coding Practice</td>
-          <td class="skill-values">Agentic Programming, Harness Engineering</td>
+          <td class="skill-label">AI / LLM Engineering</td>
+          <td class="skill-values">Multi-vendor LLM integration (LiteLLM), prompt caching &amp; cost engineering, eval design, guardrails (validated-AST query compilation, prompt-injection hardening), agentic workflows (Claude Code), harness engineering</td>
         </tr>
       </table>
     </section>
