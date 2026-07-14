@@ -40,7 +40,10 @@ Jun 2016 – Feb 2019
 
 ### LLM-Powered Systems
 
-- **sans_schema — query your data without knowing its schema** — Semantic query gateway with an LLM in the request path, wrapped in a deterministic contract: clients send `{want, where}` — their own field names plus a plain-English filter — and the gateway semantically resolves fields onto the real backend schema, compiles the filter to a validated predicate AST (the injection boundary; raw NL→SQL is never executed), and answers in the client's own keys with an `interpreted` echo. Two-part resolution cache, prompt-cache layout, confidence gate with refusal, adversarial SQLi/prompt-injection review; de-risked by a multi-vendor spike (~100% on a 52-case benchmark, 3 vendors / 9 models). Python/FastAPI on Fly.io; Next.js playground on Vercel. Live demo: https://sans-schema-playground.vercel.app/ · https://github.com/SansWord/sans_schema
+- **sans_schema — query your data without knowing its schema** — Semantic query gateway with an LLM in the request path, wrapped in a deterministic contract. Live demo: https://sans-schema-playground.vercel.app/ · https://github.com/SansWord/sans_schema
+  - Clients send `{want, where}` — their own field names plus a plain-English filter; the gateway semantically resolves fields onto the real backend schema and answers in the client's own keys with an `interpreted` echo.
+  - Safety boundary: the filter compiles to a validated predicate AST — raw NL→SQL is never executed; hardened via an adversarial SQLi / prompt-injection review.
+  - Serving discipline: two-part resolution cache, prompt-cache layout, confidence gate with refusal; de-risked by a multi-vendor spike (~100% on a 52-case benchmark, 3 vendors / 9 models). Python/FastAPI on Fly.io; Next.js playground on Vercel.
 
 ### Shipped Products — Built with Agentic Workflows
 
