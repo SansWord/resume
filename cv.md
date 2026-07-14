@@ -11,7 +11,7 @@
 
 ## Professional Summary
 
-Senior Software Engineer with 9+ years designing and operating large-scale distributed systems and global data infrastructure on AWS and GCP, serving ~900M monthly active users across US, APAC, and Europe. Specialized in high-throughput, fault-tolerant pipelines (>20K msgs/sec), scalable data platforms, and cloud-native migrations. Proven technical leader and mentor recognized for cross-functional collaboration and driving large-scale impact across globally distributed teams. Now building and measuring agentic development and harness engineering through hands-on projects and public writing — applying measurement discipline (cost, model comparison, workflow design) to AI-assisted software engineering.
+Senior Software Engineer with 9+ years designing and operating large-scale distributed systems and global data infrastructure on AWS and GCP, serving ~900M monthly active users across US, APAC, and Europe. Specialized in high-throughput, fault-tolerant pipelines (>20K msgs/sec), scalable data platforms, and cloud-native migrations. Proven technical leader and mentor recognized for cross-functional collaboration and driving large-scale impact across globally distributed teams. Now building and measuring agentic development and harness engineering through hands-on projects and public writing — applying measurement discipline (cost, model comparison, workflow design) to AI-assisted engineering and LLM-powered systems — and convening AI展 (aitian), a weekly AI-application meetup (https://aitian.dev/).
 
 ## Work Experience
 
@@ -48,6 +48,10 @@ Jun 2016 – Feb 2019
 - **sans_ai_mock — an AI mock-interview kit** — Multi-mode Claude Code agent — a root CLAUDE.md mode-routes between interviewer and developer modes on a single repo. Measured per-mock API cost (~$19–$26) across Pro / Max / raw-API tiers; includes feedback rubric, real-run example, and a security-aware CLAUDE.md audit recipe for safe repo onboarding. https://github.com/SansWord/sans_ai_mock
 - **sans_cube — Bluetooth Rubik's-cube solve analyzer** — A real-time smart-cube solve analyzer with BLE ingestion, live 3D rendering, phase detection (CFOP/Roux), and opt-in Firestore cloud sync. Deliberately picked an unfamiliar stack to stress-test AI-assisted workflows on greenfield code. https://sansword.github.io/sans_cube/
 - **More work** — sans_learning (measured Claude Code cost notes — 7.8× model delta, https://github.com/SansWord/sans_learning) · cut_sh (ffmpeg scripting, https://sansword.github.io/cut_sh/) · sans_yt_summary (Claude skill, prompt-injection hardening, https://github.com/SansWord/sans_yt_summary/)
+
+## Community
+
+- **AI展 (aitian) — co-organizer & moderator, weekly AI-application meetup** — A weekly online meetup where members ("aitians") demo what they're building and trade AI workflows, every Tuesday. Also built the meetup's bilingual portal end-to-end: Markdown/YAML content validated and built to JSON by CI, with a PR-based contribution flow so moderators and speakers own their entries — shipped with agentic Claude Code workflows. Presented sans_schema at the opening session. https://aitian.dev/
 
 ## Patent
 
