@@ -791,6 +791,17 @@
       </div>
 
       <div class="project-card">
+        <div class="project-tag">Live Demo · Semantic Gateway · LLM in the Request Path · FastAPI · Postgres</div>
+        <div class="project-name" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <a href="https://github.com/SansWord/sans_schema" target="_blank" rel="noopener">sans_schema <span class="desc-tail">— query your data without knowing its schema</span> ↗</a>
+          <a class="live-demo-badge" href="https://sans-schema-playground.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
+        </div>
+        <div class="project-subtitle" style="font-size:13.5px;color:var(--text-secondary);font-style:italic;margin:1px 0 7px;">Where the data-infra background meets the AI work: an LLM in the request path, wrapped in a deterministic contract.</div>
+        <p class="project-desc">A semantic query gateway: clients send <code style="font-size:13px;background:var(--tag-bg);padding:1px 5px;border-radius:3px">{want, where}</code> — their <em>own</em> field names plus a plain-English filter — against a backend whose schema they never see. The gateway <strong>semantically resolves fields, compiles the filter to a validated predicate AST</strong> (the injection boundary — raw NL→SQL is never executed), runs it on Postgres, and answers in the client's own keys with an <code style="font-size:13px;background:var(--tag-bg);padding:1px 5px;border-radius:3px">interpreted</code> echo. Production-minded AI plumbing: two-part resolution cache, prompt-cache layout, confidence gate with refusal, adversarial SQLi/prompt-injection review — de-risked first by a <strong>multi-vendor resolution spike (~100% on a 52-case benchmark across 3 vendors / 9 models)</strong>. Python/FastAPI gateway on Fly.io; Next.js <a href="https://sans-schema-playground.vercel.app/" target="_blank" rel="noopener">playground</a> with request-transparency panels + <a href="https://sans-schema-playground.vercel.app/slides.html" target="_blank" rel="noopener">slides</a> on Vercel.</p>
+        <div class="project-period">2026 · Jul</div>
+      </div>
+
+      <div class="project-card">
         <div class="project-tag">Live Product · Full-Stack · Next.js · Postgres</div>
         <div class="project-name" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
           <a href="https://guasi.tw/about" target="_blank" rel="noopener">guasi (我是) <span class="desc-tail">— cross-platform social identity verification</span> ↗</a>
