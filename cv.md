@@ -11,7 +11,7 @@
 
 ## Professional Summary
 
-Senior Software Engineer with 9+ years designing and operating large-scale distributed systems and global data infrastructure on AWS and GCP, serving ~900M monthly active users across US, APAC, and Europe. Specialized in high-throughput, fault-tolerant pipelines (>20K msgs/sec), scalable data platforms, and cloud-native migrations. Proven technical leader and mentor recognized for cross-functional collaboration and driving large-scale impact across globally distributed teams. Since June 2025, on a self-directed build year: designing, shipping, and publicly measuring LLM-powered systems and agentic development workflows (harness engineering) — applying the same measurement discipline (cost, model comparison, eval design) to AI work — and convening AI展 (aitian), a weekly AI-application meetup (https://aitian.dev/).
+Senior Software Engineer with 9+ years designing and operating large-scale distributed systems and global data infrastructure on AWS and GCP, serving ~900M monthly active users across US, APAC, and Europe. Specialized in high-throughput, fault-tolerant pipelines (>20K msgs/sec), scalable data platforms, and cloud-native migrations. Proven technical leader and mentor recognized for cross-functional collaboration and driving large-scale impact across globally distributed teams. Since June 2025, on a self-directed build year: designing, shipping, and publicly measuring LLM-powered systems and agentic development workflows (harness engineering) — applying the same measurement discipline (cost, model comparison, eval design) to AI work — and co-organizing AI展 (aitian), a weekly AI-application meetup that has run unbroken since Jul 2026 to 40–50 engineers a session (https://aitian.dev/).
 
 ## Work Experience
 
@@ -59,7 +59,10 @@ Jun 2016 – Feb 2019
 
 ## Community
 
-- **AI展 (aitian) — co-organizer & moderator, weekly AI-application meetup** — A weekly online meetup where members ("aitians") demo what they're building and trade AI workflows, every Tuesday. Also built the meetup's bilingual portal end-to-end: Markdown/YAML content validated and built to JSON by CI, with a PR-based contribution flow so moderators and speakers own their entries — shipped with agentic Claude Code workflows. Presented sans_schema at the opening session. https://aitian.dev/
+- **AI展 (aitian) — co-organizer & moderator, weekly AI-application meetup** — https://aitian.dev/
+  - A weekly online meetup where members ("aitians") demo what they're building and trade AI workflows. Started from zero in Jul 2026 and has run every Tuesday since, unbroken — 40–50 attendees per session (peak 107). Bilingual EN/ZH programming.
+  - Recruit and moderate the speaker roster: engineers from AWS and Netskope, a Vector Institute AI researcher, a UIUC informatics PhD, and AI-startup founders. I set each week's theme and run the open-discussion segment. Presented sans_schema at the opening session.
+  - Built and operate the portal end-to-end: Markdown/YAML content validated and built to JSON by CI, with a PR-based contribution flow so moderators and speakers own their entries — shipped with agentic Claude Code workflows. The community runs on infrastructure I keep in production.
 
 ## Patent
 
