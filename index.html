@@ -802,6 +802,16 @@
       </div>
 
       <div class="project-card">
+        <div class="project-tag">Live App · In-Browser ML Inference · WebGPU · ONNX Runtime</div>
+        <div class="project-name" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <a href="https://sansword.github.io/sans_bass/" target="_blank" rel="noopener">sans_bass <span class="desc-tail">— in-browser stem separation &amp; practice player</span> ↗</a>
+          <a class="live-demo-badge" href="https://sansword.github.io/sans_bass/" target="_blank" rel="noopener">Live Demo</a>
+        </div>
+        <p class="project-desc">A browser-only multitrack player for learning an instrument part by ear. Runs <strong>six-stem source separation entirely client-side</strong> — <code>onnxruntime-web</code> with <code>htdemucs_6s</code> on WebGPU at <strong>8.4&times; realtime</strong> (23.9 s for a 200 s track) — then solos one instrument against an A&ndash;B loop driven on the audio thread so all six stems stay sample-locked. <strong>The audio never leaves the machine</strong>: no upload, no server, no build step. Output is held to the native Demucs pipeline by a parity harness (0.98&ndash;0.997 correlation per stem), backed by 81 dependency-free unit tests, zh-TW/English i18n, cookieless analytics, and per-PR preview deploys. Shipped v1.0 &rarr; v1.8 in nine days.</p>
+        <div class="project-period">2026 · Aug</div>
+      </div>
+
+      <div class="project-card">
         <div class="project-tag">App · BLE · 3D Rendering · Firestore</div>
         <div class="project-name" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
           <svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;vertical-align:middle">
@@ -828,6 +838,17 @@
       </div>
 
       <div class="project-group-label" style="font-size:12.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-muted);margin:22px 0 12px;">Agentic Practice &amp; Writing</div>
+
+      <div class="project-card">
+        <div class="project-tag">Measured Experiment · Cryptanalysis · Claude Code · Python</div>
+        <div class="project-name" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <a href="https://sansword.github.io/posts/enigma_cracking_with_claude.html" target="_blank" rel="noopener">sans_enigma <span class="desc-tail">— cracking Enigma with Claude</span> ↗</a>
+          <a class="live-demo-badge" href="https://sansword.github.io/posts/enigma_cracking_with_claude.html" target="_blank" rel="noopener">Poster</a>
+        </div>
+        <div class="project-subtitle" style="font-size:13.5px;color:var(--text-secondary);font-style:italic;margin:1px 0 7px;">From 610,000 years to 4.4 seconds.</div>
+        <p class="project-desc">I picked the sources — a Computerphile video, then the 1995 <em>Cryptologia</em> paper behind it — and Claude Code turned each one into Python attacks on an Enigma M3 cipher. Every step is <strong>measured on the same laptop</strong>: a known-plaintext crib attack in <strong>4.4 min</strong>, and a ciphertext-only staged attack (Gillogly's 52-trial ring recovery plus a trigram-scored plugboard search) in <strong>4.4 s</strong>, against ~4.1 h for plugboard-free brute force and ~610,000 years with a plugboard. Re-measuring every number caught an overclaim — the fast ring recovery isn't always letter-perfect — and token usage was measured from the session transcript (<strong>~58% of one Claude Pro 5-hour limit</strong>). Published as a bilingual poster (<a href="https://sansword.github.io/posts/enigma_cracking_with_claude.html" target="_blank" rel="noopener">EN</a> / <a href="https://sansword.github.io/posts/enigma_cracking_with_claude_zh.html" target="_blank" rel="noopener">繁中</a>) with <a href="https://github.com/SansWord/sans_enigma" target="_blank" rel="noopener">code and a prompt-by-prompt development journal</a>.</p>
+        <div class="project-period">2026 · Sep</div>
+      </div>
 
       <div class="project-card">
         <div class="project-tag">Essay · Context Engineering</div>
