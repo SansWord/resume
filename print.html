@@ -148,7 +148,7 @@
     .skills-table tr { border-bottom: 0.5pt solid #eee; }
     .skills-table tr:last-child { border-bottom: none; }
     .skills-table td { font-size: 8pt; padding: 1.5pt 0; vertical-align: top; }
-    .skill-label { font-weight: 600; color: #1a1a1a; width: 90pt; padding-right: 4pt; white-space: nowrap; }
+    .skill-label { font-weight: 600; color: #1a1a1a; width: 66pt; padding-right: 4pt; white-space: nowrap; }
     .skill-val { color: #444; }
 
     /* ── PROJECTS ── */
@@ -218,9 +218,9 @@
           </div>
         </div>
         <ul class="exp-bullets">
-          <li>Led end-to-end delivery of Yahoo's data infrastructure evolution to GCP, leading a 5+ engineer team to build a GCP-native ingestion platform using <strong>Cloud Composer, Airflow, and Dataproc</strong> — improving data freshness from 3+ hours to <strong>under 60 minutes</strong> across US, APAC, and Europe.</li>
-          <li>Supported a <strong>zero-downtime AWS migration</strong> with Kubernetes-based auto-scaling, maintaining multi-region lambda architecture serving recommendation, ads, and downstream systems across News, Sports, and Finance.</li>
-          <li>Built aggregation and caching layers that <strong>reduced data scanned from 725 GB to 121 KB</strong>, cutting query costs by <strong>70%</strong> on Yahoo's BigQuery infrastructure.</li>
+          <li>Led end-to-end delivery of Yahoo's data infrastructure evolution to GCP, building a GCP&#8209;native ingestion platform on <strong>Cloud Composer, Airflow, and Dataproc</strong> serving US, APAC, and Europe.</li>
+          <li>Designed the <strong>per-org, GCP-native pipeline platform</strong> (shared schema module + reusable Terraform template) replacing a centralized ETL shared by orgs including News, Sports, and Finance, so each org owns its own cost and release cycle as Yahoo moved off on-prem data centers; tiered tables cut data scanned <strong>725 GB → 121 KB</strong> and storage/query cost <strong>70%</strong>.</li>
+          <li>As tech lead of a 6-engineer team, migrated Sports first, partnering with the Sports team on automated acceptance checks and running old and new pipelines side by side before switching: data freshness <strong>3+ h → 30 min</strong>, new fields in <strong>1&nbsp;week</strong>; turned a silent-failure incident into job&#8209;completion alerting.</li>
           <li>Drove on-call reliability initiative, reducing open incident tickets <strong>from 1,000+ to zero</strong>; practices adopted by the broader on-call team.</li>
           <li>Co-invented a patented salient entity algorithm (<a href="https://patents.google.com/patent/US11803605B2">US11803605B2</a>) integrating ranking models into production recommendation systems.</li>
         </ul>
@@ -286,10 +286,10 @@
       <div class="section-title">Technical Skills</div>
       <table class="skills-table">
         <tr><td class="skill-label">Languages</td><td class="skill-val">Python, Java, SQL, Shell</td></tr>
-        <tr><td class="skill-label">Cloud – GCP</td><td class="skill-val">Dataproc, Cloud Composer, Dataflow, Airflow, BigQuery</td></tr>
+        <tr><td class="skill-label">Cloud – GCP</td><td class="skill-val">Dataproc, Cloud Composer, Dataflow, Airflow, BigQuery, GCS</td></tr>
         <tr><td class="skill-label">Cloud – AWS</td><td class="skill-val">S3, ECS, ELB, ElastiCache</td></tr>
         <tr><td class="skill-label">Infrastructure</td><td class="skill-val">Terraform, Kubernetes, Docker, Redis</td></tr>
-        <tr><td class="skill-label">Stream Processing</td><td class="skill-val">Apache Pulsar, Kafka</td></tr>
+        <tr><td class="skill-label">Data Processing</td><td class="skill-val">Spark, Hadoop (HDFS), Apache Pulsar, Kafka</td></tr>
         <tr><td class="skill-label">AI / LLM</td><td class="skill-val">LLM integration (LiteLLM), prompt caching, eval design, guardrails, agentic programming</td></tr>
       </table>
     </div>
@@ -314,17 +314,22 @@
 
       <div class="project-item">
         <div class="project-name"><a href="https://guasi.tw/about">guasi (我是)</a></div>
-        <div class="project-desc">Live full-stack identity-verification product — Next.js, Postgres/Prisma, NextAuth, preview-deploy CI/CD; built via agentic Claude Code workflows.</div>
+        <div class="project-desc">Live full-stack identity-verification product — Next.js, Postgres/Prisma, NextAuth, preview-deploy CI/CD; built via agentic Claude Code.</div>
+      </div>
+
+      <div class="project-item">
+        <div class="project-name"><a href="https://sansword.github.io/sans_bass/">sans_bass</a></div>
+        <div class="project-desc">Six-stem separation <strong>entirely client-side</strong> &mdash; ONNX Runtime + htdemucs_6s on WebGPU at <strong>8.4&times; realtime</strong>, held to the native pipeline by a parity harness; the audio never leaves the machine. <a href="https://sansword.github.io/sans_bass/">live demo</a>.</div>
       </div>
 
       <div class="project-item">
         <div class="project-name"><a href="https://sansword.github.io/sans_cube/">sans_cube</a></div>
-        <div class="project-desc">Real-time Bluetooth Rubik's-cube solve analyzer — BLE, live 3D rendering, CFOP/Roux phase detection.</div>
+        <div class="project-desc">Bluetooth Rubik's-cube solve analyzer — BLE, live 3D rendering, CFOP/Roux phase detection.</div>
       </div>
 
       <div class="project-item">
         <div class="project-name"><a href="https://sansword.github.io/sans_blog/doc-tree/">The Document Tree</a></div>
-        <div class="project-desc">Context engineering — a lazy-loaded doc tree that keeps an AI agent's context in sync with the code. Productized as a reusable template, <a href="https://github.com/SansWord/sans_doc_tree">sans_doc_tree</a>.</div>
+        <div class="project-desc">Context engineering — a lazy-loaded doc tree keeping an agent's context in sync with the code. Productized as <a href="https://github.com/SansWord/sans_doc_tree">sans_doc_tree</a>.</div>
       </div>
 
       <div class="project-item">

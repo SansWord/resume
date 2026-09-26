@@ -732,9 +732,9 @@
             </div>
           </div>
           <ul class="exp-bullets">
-            <li>Led end-to-end delivery of Yahoo's data infrastructure evolution to GCP, leading a dedicated 5+ engineer team to build a new GCP-native ingestion platform using <strong>Cloud Composer, Airflow, and Dataproc</strong> — improving data freshness from 3+ hours to <strong>under 60 minutes</strong> across US, APAC, and Europe.</li>
-            <li>Contributed to Yahoo's hybrid cloud data infrastructure, supporting a <strong>zero-downtime AWS migration</strong> with Kubernetes-based auto-scaling and maintaining the multi-region lambda architecture serving recommendation, ads, and downstream systems across News, Sports, and Finance.</li>
-            <li>Identified and resolved large-scale query inefficiencies, building aggregation and caching layers that <strong>reduced data scanned from 725 GB to 121 KB</strong> and cut query costs by <strong>70%</strong> on Yahoo's BigQuery infrastructure.</li>
+            <li>Led end-to-end delivery of Yahoo's data infrastructure evolution to GCP, building a new GCP-native ingestion platform on <strong>Cloud Composer, Airflow, and Dataproc</strong> serving US, APAC, and Europe.</li>
+            <li>Designed the platform behind splitting Yahoo's centralized ETL pipeline into <strong>per-org, GCP-native pipelines</strong> for orgs including News, Sports, and Finance: set the boundary between the shared core schema and each org's own hydration, and built one shared module deployed from a <strong>reusable Terraform template</strong>, so each org owns its cost, freshness, and release cycle — driven by the orgs' need to own their costs separately and Yahoo's move off on-prem data centers. Rebuilt the stack natively (Oozie → Cloud Composer, Pig → Spark on Dataproc, HDFS → GCS/BigQuery) with tiered bronze/silver/gold tables that <strong>reduced dashboard data scanned from 725 GB to 121 KB</strong> and <strong>cut storage/query cost by 70%</strong>.</li>
+            <li>As tech lead of a 6-engineer team, took it from design to production: split the architecture into four study areas, took the throughput-critical piece myself, aligned the orgs on what the central team would and wouldn't own, and agreed the hydration interface with the metadata team. Migrated Sports first, running the old and new pipelines side by side with automated acceptance checks defined with the Sports team before switching over — <strong>data freshness from 3+ hours to 30 minutes</strong>, <strong>new fields shipped in 1 week</strong>. When a silent job failure hit before a Sports standup, fixed it within the hour, shared the post-mortem in their channel, and shipped job-completion alerting tied to the freshness SLO.</li>
             <li>Drove an on-call reliability initiative, resolving root causes and improving monitoring to reduce open incident tickets <strong>from 1,000+ to zero</strong>; established practices subsequently adopted by the broader on-call team.</li>
             <li>Led cross-functional collaboration between ML research and engineering to productionize ranking models, co-inventing a patented salient entity algorithm (<a href="https://patents.google.com/patent/US11803605B2" target="_blank" rel="noopener">US11803605B2</a>), and integrating ranking models into production.</li>
           </ul>
@@ -920,7 +920,7 @@
         </tr>
         <tr>
           <td class="skill-label">Cloud — GCP</td>
-          <td class="skill-values">Dataproc, Cloud Composer, Dataflow, Airflow, BigQuery</td>
+          <td class="skill-values">Dataproc, Cloud Composer, Dataflow, Airflow, BigQuery, GCS</td>
         </tr>
         <tr>
           <td class="skill-label">Cloud — AWS</td>
@@ -931,8 +931,12 @@
           <td class="skill-values">Terraform, Kubernetes, Docker, Redis</td>
         </tr>
         <tr>
-          <td class="skill-label">Stream Processing</td>
-          <td class="skill-values">Apache Pulsar, Kafka</td>
+          <td class="skill-label">Data Processing</td>
+          <td class="skill-values">Spark, Hadoop (HDFS), Apache Pulsar, Kafka</td>
+        </tr>
+        <tr>
+          <td class="skill-label">Data Modeling</td>
+          <td class="skill-values">Medallion architecture (bronze/silver/gold), shared core schema with per-org extensions</td>
         </tr>
         <tr>
           <td class="skill-label">AI / LLM Engineering</td>

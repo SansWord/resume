@@ -19,10 +19,10 @@ Senior Software Engineer with 9+ years designing and operating large-scale distr
 **Sr. Software Dev Engineer**
 Feb 2019 – Jun 2025
 
-- Led end-to-end delivery of Yahoo's data infrastructure evolution to GCP over years, leading a dedicated 5+ engineer team to build a new GCP-native ingestion platform while designing a globally distributed multi-tenant pipeline using Cloud Composer, Airflow, and Dataproc — improving data freshness from 3+ hours to under 60 minutes across US, APAC, and Europe
-- Contributed to Yahoo's hybrid cloud data infrastructure, supporting a zero-downtime AWS migration with Kubernetes-based auto-scaling and maintaining the multi-region lambda architecture serving recommendation, ads, and multiple downstream systems across News, Sports, and Finance
-- Identified and resolved large-scale query inefficiencies, building aggregation and caching layers that reduced data scanned from 725 GB to 121 KB and cut query costs by 70% on Yahoo's BigQuery infrastructure
-- Drove an on-call reliability initiative over several months, resolving root causes and improving monitoring to reduce open incident tickets from 1,000+ to zero; established practices subsequently adopted by the broader on-call team
+- Led end-to-end delivery of Yahoo's data infrastructure evolution to GCP, building a new GCP-native ingestion platform on Cloud Composer, Airflow, and Dataproc serving US, APAC, and Europe
+- Designed the platform behind splitting Yahoo's centralized ETL pipeline into per-org, GCP-native pipelines for orgs including News, Sports, and Finance: set the boundary between the shared core schema and each org's own hydration, and built one shared module deployed from a reusable Terraform template, so each org owns its cost, freshness, and release cycle — driven by the orgs' need to own their costs separately and Yahoo's move off on-prem data centers. Rebuilt the stack natively (Oozie → Cloud Composer, Pig → Spark on Dataproc, HDFS → GCS/BigQuery) with tiered bronze/silver/gold tables that reduced dashboard data scanned from 725 GB to 121 KB and cut storage/query cost by 70%
+- As tech lead of a 6-engineer team, took it from design to production: split the architecture into four study areas, took the throughput-critical piece myself, aligned the orgs on what the central team would and wouldn't own, and agreed the hydration interface with the metadata team. Migrated Sports first, running the old and new pipelines side by side with automated acceptance checks defined with the Sports team before switching over — data freshness from 3+ hours to 30 minutes, new fields shipped in 1 week. When a silent job failure hit before a Sports standup, fixed it within the hour, shared the post-mortem in their channel, and shipped job-completion alerting tied to the freshness SLO
+- Drove an on-call reliability initiative, resolving root causes and improving monitoring to reduce open incident tickets from 1,000+ to zero; established practices subsequently adopted by the broader on-call team
 - Led cross-functional collaboration between ML research and engineering teams to productionize ranking models, co-inventing a patented salient entity algorithm (US11803605B2), and integrating ranking models into production
 
 ### Yahoo! E-Commerce Platform -- Taipei, Taiwan
@@ -78,8 +78,9 @@ Jun 2016 – Feb 2019
 ## Skills
 
 - **Languages:** Python, Java, SQL, Shell
-- **Cloud — GCP:** Dataproc, Cloud Composer, Dataflow, Airflow, BigQuery
+- **Cloud — GCP:** Dataproc, Cloud Composer, Dataflow, Airflow, BigQuery, GCS
 - **Cloud — AWS:** S3, ECS, ELB, ElastiCache
 - **Infrastructure:** Terraform, Kubernetes, Docker, Redis
-- **Stream Processing:** Apache Pulsar, Kafka
+- **Data Processing:** Spark, Hadoop (HDFS), Apache Pulsar, Kafka
+- **Data Modeling:** Medallion architecture (bronze/silver/gold), shared core schema with per-org extensions
 - **AI / LLM Engineering:** multi-vendor LLM integration (LiteLLM), prompt caching & cost engineering, eval design, guardrails (validated-AST query compilation, prompt-injection hardening), agentic workflows (Claude Code), harness engineering
